@@ -1,8 +1,17 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 export default function Layout({ children }) {
+  const router = useRouter();
   return (
     <>
       <header className="w-[1100px] mx-auto max-w-full px-4 h-12 flex justify-between items-center">
-        <a href="#">
+        <Link
+          href={{
+            pathname: "/",
+            query: { name: "home" },
+          }}
+        >
           <svg
             aria-label="Daily Dev Tips logo"
             xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +31,7 @@ export default function Layout({ children }) {
               fill="rgb(0,185,232)"
             ></path>
           </svg>
-        </a>
+        </Link>
         <nav>
           <ul className="flex gap-6	">
             <li>
@@ -32,7 +41,14 @@ export default function Layout({ children }) {
               <a href="#">Work</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link
+                href={{
+                  pathname: "/contact",
+                  query: { name: "let's connect" },
+                }}
+              >
+                <a>Contact</a>
+              </Link>
             </li>
           </ul>
         </nav>
