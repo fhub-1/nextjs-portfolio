@@ -1,16 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Work() {
   return (
-    <article className='flex items-center border-b-2 py-6'>
+    <article className="flex items-center py-6 border-b-2">
       <img
-        src='https://via.placeholder.com/240'
-        className='w-1/3 mr-6 rounded-lg'
+        src="https://via.placeholder.com/240"
+        alt="logo alt"
+        className="w-1/3 mr-6 rounded-lg"
       />
       <div>
-        <h3 className='text-2xl mb-2'>Designing Dashboards</h3>
-        <span className='text-gray-600 mb-4 block'>
-          <date className='bg-blue-800 text-white px-5 py-1.5 mr-4 rounded-xl'>
+        <h3 className="mb-2 text-2xl">Designing Dashboards</h3>
+        <span className="block mb-4 text-gray-600">
+          <date className="bg-blue-800 text-white px-5 py-1.5 mr-4 rounded-xl">
             2022
-          </date>{' '}
+          </date>{" "}
           Dashboard
         </span>
         <p>

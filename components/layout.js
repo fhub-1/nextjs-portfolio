@@ -17,6 +17,7 @@ export default function Layout({ children }) {
             xmlns="http://www.w3.org/2000/svg"
             width="30"
             height="24"
+            className="cursor-pointer"
           >
             <path
               d="M 13.073 23.977 L 10.214 23.147 C 9.914 23.063 9.746 22.748 9.83 22.448 L 16.228 0.406 C 16.312 0.106 16.626 -0.063 16.926 0.022 L 19.785 0.851 C 20.085 0.936 20.254 1.25 20.17 1.55 L 13.772 23.592 C 13.683 23.892 13.373 24.066 13.073 23.977 Z"
@@ -33,12 +34,26 @@ export default function Layout({ children }) {
           </svg>
         </Link>
         <nav>
-          <ul className="flex gap-6	">
+          <ul className="flex gap-6 ">
             <li>
-              <a href="#">Blog</a>
+              <Link
+                href={{
+                  pathname: "/blog",
+                  query: { name: "let's learn together" },
+                }}
+              >
+                <a>Blog</a>
+              </Link>
             </li>
             <li>
-              <a href="#">Work</a>
+              <Link
+                href={{
+                  pathname: "/work",
+                  query: { name: "check out my work" },
+                }}
+              >
+                <a>Work</a>
+              </Link>
             </li>
             <li>
               <Link
@@ -55,7 +70,7 @@ export default function Layout({ children }) {
       </header>
       <main className="">{children}</main>
 
-      <footer className="container mx-auto px-4 text-center text-sm p-4 text-bold font-mono">
+      <footer className="container p-4 px-4 mx-auto font-mono text-sm text-center text-bold">
         <div>social icons</div>
         &copy; 2022 Joseph kitheka.All rights reserved.
       </footer>

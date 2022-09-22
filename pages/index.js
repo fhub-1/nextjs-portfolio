@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Link from "next/link";
 import Article from "../components/article";
 import TitleLinkSection from "../components/titleLinkSection";
 import Work from "../components/work";
@@ -26,13 +27,16 @@ export default function Home() {
             world a better place.I love to create videos about my experiences
             with different tools and technologies.
           </p>
-
-          <a
-            href="#"
-            className="inline-block px-6 py-3 text-lg text-white rounded-lg bg-primary"
+          <Link
+            href={{
+              pathname: "/work",
+              query: { name: "check out my project" },
+            }}
           >
-            Check my Work
-          </a>
+            <a className="inline-block px-6 py-3 text-lg text-white rounded-lg bg-primary">
+              Check my Work
+            </a>
+          </Link>
         </div>
         <div className="relative z-0 inline-block m-5 before:block before:-left-2 before:-bottom-2 before:absolute before:inset-0 before:bg-primary before:rounded-full">
           <img
