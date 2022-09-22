@@ -1,5 +1,4 @@
-import React from "react";
-import Work from "../components/work";
+import Work from "/components/work";
 
 const work = () => {
   return <Work />;
