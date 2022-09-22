@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Head from "next/head";
 import Link from "next/link";
 import Article from "../components/article";
 import TitleLinkSection from "../components/titleLinkSection";
@@ -8,6 +9,9 @@ import Work from "../components/work";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Joseph kitheka | Home</title>
+      </Head>
       <div className="container flex items-center py-12 mx-auto">
         <div className="flex-1">
           <h1 className="mb-4 font-mono text-2xl font-bold">
@@ -15,7 +19,7 @@ export default function Home() {
             <br />
             Front-end React Developer
           </h1>
-          <p className="mb-8 text-base leading-relaxed">
+          <p className="col-start-1 mt-4 text-sm leading-6 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
             I am a Front - end React Developer with over 3 years of experience
             in the industry. I am passionate about building products that people
             love using the latest technologies. I am also an{" "}
@@ -38,7 +42,7 @@ export default function Home() {
             </a>
           </Link>
         </div>
-        <div className="relative z-0 inline-block m-5 before:block before:-left-2 before:-bottom-2 before:absolute before:inset-0 before:bg-primary before:rounded-full">
+        <div className="relative z-0 inline-block m-5 before:block before:-left-2 before:-bottom-2 before:absolute before:inset-0 before:bg-shadowcolor before:rounded-full">
           <img
             src="/images/me.JPG"
             alt="Image of Joseph"

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -5,6 +6,9 @@ export default function Layout({ children }) {
   const router = useRouter();
   return (
     <>
+      <Head>
+        <title>Joseph kitheka | Layout</title>
+      </Head>
       <header className="w-[1100px] mx-auto max-w-full px-4 h-12 flex justify-between items-center">
         <Link
           href={{
