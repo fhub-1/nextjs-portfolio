@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ImFacebook, ImTwitter, ImYoutube } from "react-icons/im";
-
+import { ImTwitter, ImYoutube } from "react-icons/im";
+import { BsLinkedin } from "react-icons/bs";
 export default function Layout({ children }) {
   const router = useRouter();
 
@@ -75,37 +75,33 @@ export default function Layout({ children }) {
         </nav>
       </header>
       <main className="">{children}</main>
-      {/* <footer className="container p-4 px-4 mx-auto font-mono text-sm text-center text-bold">
-        <div>social icons</div>
-        &copy; 2022 Joseph kitheka.All rights reserved.
-      </footer> */}
-      eturn (
-      <footer className="font-extrabold bg-gray-50">
+      <footer className="font-semibold ">
         {/* <Newslatter></Newslatter> */}
         <div className="container flex justify-center py-12 mx-auto">
           <div className="py-5">
             <div className="flex justify-center gap-6 font-semibold">
-              <Link href={"/"}>
+              <Link
+                href={"https://www.linkedin.com/in/joseph-kitheka-4827a01a7/"}
+              >
                 <a>
-                  <ImFacebook color="#888888" />
+                  <BsLinkedin color="#888888" size={30} />
                 </a>
               </Link>
-              <Link href={"/"}>
+              <Link href={"https://twitter.com/josehub121"}>
                 <a>
-                  <ImTwitter color="#888888" />
+                  <ImTwitter color="#888888" size={30} />
                 </a>
               </Link>
-              <Link href={"/"}>
+              <Link href={"https://www.youtube.com/hackthecoding"}>
                 <a>
-                  <ImYoutube color="#888888" />
+                  <ImYoutube color="#888888" size={30} />
                 </a>
               </Link>
             </div>
 
-            <p className="py-5 text-gray-400">
-              Copyright ©2022 All rights reserved
+            <p className="py-5 font-mono text-gray-400 text-1xl">
+              ©2022 All Joseph Kitheka. rights reserved
             </p>
-            <p className="text-center text-gray-400">Terms & Condition</p>
           </div>
         </div>
       </footer>
