@@ -25,14 +25,16 @@ export async function getStaticProps() {
   };
 }
 
-export default function Blog({ posts }) {
+export default function blog({ posts }) {
   console.log(posts);
   return (
     <>
       <Head>
         <title>Joseph kitheka | Blog</title>
       </Head>
-      <Posts posts={posts} />
+      <div>
+        <Posts posts={posts} />
+      </div>
     </>
   );
 }

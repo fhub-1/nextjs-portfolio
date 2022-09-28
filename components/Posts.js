@@ -2,7 +2,7 @@ import Link from "next/link";
 
 /* eslint-disable react/jsx-key */
 export default function Posts({ posts }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <>
       <div className="px-6 md:flex md:pt-20">
@@ -21,7 +21,8 @@ export default function Posts({ posts }) {
                   {post.categories}
                 </span>
                 <Link href={`post/${post.slug.current}`}>
-                  <a>
+                  <a className="text-gray-600 transition-colors duration-500 hover:text-gray-900">
+                    {" "}
                     <h2 className="pb-4 text-2xl font-bold tracking-tighter text-gray-700 md:text-4xl">
                       {post.title}
                     </h2>
@@ -29,7 +30,7 @@ export default function Posts({ posts }) {
                 </Link>
                 <span>
                   By{" "}
-                  <span className="text-sm text-yellow-500">
+                  <span className="text-sm text-primary">
                     {post.authorName}{" "}
                   </span>
                   on {new Date(post.publishedAt).toDateString()}

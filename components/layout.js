@@ -3,8 +3,16 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { ImTwitter, ImYoutube } from "react-icons/im";
 import { BsLinkedin } from "react-icons/bs";
+import blog from "pages/blog";
+import Navbar from "./navbar";
+
 export default function Layout({ children }) {
   const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push("/blog");
+  };
 
   return (
     <>
@@ -42,12 +50,7 @@ export default function Layout({ children }) {
         <nav>
           <ul className="flex gap-6 ">
             <li>
-              <Link
-                href={{
-                  pathname: "/blog",
-                  query: { name: "let's learn together" },
-                }}
-              >
+              <Link href={"/blog"}>
                 <a>Blog</a>
               </Link>
             </li>
@@ -73,6 +76,7 @@ export default function Layout({ children }) {
             </li>
           </ul>
         </nav>
+        {/* <Navbar /> */}
       </header>
       <main className="">{children}</main>
       <footer className="font-semibold ">
