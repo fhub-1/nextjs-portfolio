@@ -68,7 +68,7 @@ export default function Layout({ children }) {
                   query: { name: "let's connect" },
                 }}
               >
-                <a>Contact</a>
+                <a>Talk</a>
               </Link>
             </li>
           </ul>
@@ -84,23 +84,32 @@ export default function Layout({ children }) {
                 href={"https://www.linkedin.com/in/joseph-kitheka-4827a01a7/"}
               >
                 <a>
-                  <BsLinkedin color="#888888" size={30} />
+                  <BsLinkedin
+                    className="text-gray-900 hover:animate-bounce"
+                    size={30}
+                  />
                 </a>
               </Link>
               <Link href={"https://twitter.com/josehub121"}>
                 <a>
-                  <ImTwitter color="#888888" size={30} />
+                  <ImTwitter
+                    className="text-gray-900 hover:animate-bounce"
+                    size={30}
+                  />
                 </a>
               </Link>
               <Link href={"https://www.youtube.com/hackthecoding"}>
                 <a>
-                  <ImYoutube color="#888888" size={30} />
+                  <ImYoutube
+                    className="text-gray-900 hover:animate-bounce"
+                    size={30}
+                  />
                 </a>
               </Link>
             </div>
 
-            <p className="py-5 font-mono text-gray-400 text-1xl">
-              ©2022 All Joseph Kitheka. rights reserved
+            <p className="py-5 font-semibold text-gray-900 text-1xl">
+              © 2022 All Joseph Kitheka. rights reserved
             </p>
           </div>
         </div>

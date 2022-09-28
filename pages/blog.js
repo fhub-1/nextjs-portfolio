@@ -1,14 +1,38 @@
 import Head from "next/head";
+import Vlog from "../components/Posts";
 
-export default function Blog() {
+import client from "client";
+import groq from "groq";
+import Posts from "../components/Posts";
+
+export async function getStaticProps() {
+  const query = groq`
+  {
+   "posts": *[_type == 'post']{title, mainImage, publishedAt,slug,
+  'categories': categories[]->title,
+  'authorName': author->name,
+  'authorSlug': author->slug,
+  },
+  }
+  `;
+
+  const data = await client.fetch(query);
+
+  return {
+    props: {
+      posts: data.posts,
+    },
+  };
+}
+
+export default function Blog({ posts }) {
+  console.log(posts);
   return (
     <>
       <Head>
         <title>Joseph kitheka | Blog</title>
       </Head>
-      <div className="flex items-center justify-center min-h-screen">
-        <h1>Blog</h1>
-      </div>
+      <Posts posts={posts} />
     </>
   );
 }

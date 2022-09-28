@@ -17,9 +17,9 @@ export default function Home() {
           <h1 className="mb-4 font-mono text-2xl font-bold">
             Hi 👋 I &rsquo;m Joseph kitheka!
             <br />
-            Front-end React Developer
+            Developer.Content Creator.Speaker
           </h1>
-          <p className="col-start-1 mt-4 text-sm leading-6 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+          <p className="col-start-1 mt-4 text-sm leading-6 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400 break-before-all">
             I am a Front - end React Developer with over 3 years of experience
             in the industry. I am passionate about building products that people
             love using the latest technologies. I am also an{" "}
@@ -37,8 +37,8 @@ export default function Home() {
               query: { name: "check out my project" },
             }}
           >
-            <a className="inline-block px-6 py-3 text-lg text-white rounded-lg bg-primary">
-              Check my Work
+            <a className="inline-block px-6 py-3 text-lg font-semibold text-white rounded-lg bg-primary">
+              <span className="hover:animate-bounce">Check my Work</span>
             </a>
           </Link>
         </div>
@@ -46,7 +46,7 @@ export default function Home() {
           <img
             src="/images/me.JPG"
             alt="Image of Joseph"
-            className="relative z-10 object-cover w-48 h-48 rounded-full"
+            className="relative z-10 object-cover w-48 h-48 rounded-full "
           />
         </div>
       </div>
