@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Contact from "/components/Contact";
 
-function contact() {
+function contact({ data }) {
   return (
     <>
       <Head>
