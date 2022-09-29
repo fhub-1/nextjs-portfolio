@@ -19,8 +19,8 @@ export async function getStaticProps() {
 
 function Video({ results }) {
   console.log(results);
-  const [currentVideo, setCurrentVideo] = useState(results[0]);
-  const [playing, setPlaying] = useState(false);
+  // const [currentVideo, setCurrentVideo] = useState(results[0]);
+  // const [playing, setPlaying] = useState(false);
   return (
     <>
       <Head>
