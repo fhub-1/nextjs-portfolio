@@ -1,18 +1,6 @@
-const YOUTUBE_PLAYLIST = "https://www.googleapis.com/youtube/v3/playlistItems";
+import { YoutubeVideoPlayer } from "./youtubeplayer";
 
-export async function getServerSideProps() {
-  const res = await fetch(
-    `${YOUTUBE_PLAYLIST}?part=snippet&playlistId=PLokZwvKSs2uCc3u6uqkMB-qVM0lO8kD0a&maxResults=50&key=${process.env.MY_YOUTBE_API}`
-  );
-  const data = await res.json();
-  return {
-    props: {
-      data,
-    },
-  };
-}
-
-const Contact = ({ data }) => {
+const Contact = ({ results }) => {
   return (
     <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -23,10 +11,6 @@ const Contact = ({ data }) => {
             </h2>
           </div>
         </div>
-        {/* video section part  */}
-        {/* {data.items.map((item) => {
-          console.log("item", item);
-          return ( */}
         <>
           <div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
             <div className="overflow-hidden bg-white rounded shadow">
@@ -61,6 +45,10 @@ const Contact = ({ data }) => {
               </div>
             </div>
           </div>
+          <YoutubeVideoPlayer
+            id={currentVideo.snippet.resourceId.videoId}
+            playing={playing}
+          />
         </>
         {/* ); */}
         {/* })} */}
